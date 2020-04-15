@@ -1,0 +1,4 @@
+wxPython
+pyperclip
+Pillow
+Haishoku
