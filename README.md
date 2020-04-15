@@ -10,7 +10,7 @@
 </div>
 
 ## How to Use
-1. _*WIP, Download [Latest Release](../../releases/latest)._
+1. _\*Not yet\*, Download [Latest Release](../../releases/latest)._
 2. Download [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases), copy to same folder.
 
 Run with Python:
