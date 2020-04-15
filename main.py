@@ -607,7 +607,7 @@ class LibFrame ( wx.Frame ):
 		pass
 	
 	def listimages(self):
-		filelist=os.listdir(os.path.dirname(sys.argv[0])+"\\Downloaded")
+		filelist=os.listdir(os.path.dirname(sys.argv[0]))#+"\\Downloaded"
 		listfinal=[]
 		for i in filelist:
 			if i.endswith((".jpg",".jpeg",".png")):
@@ -632,7 +632,7 @@ class LibFrame ( wx.Frame ):
 	# Virtual event handlers, overide them in your derived class
 	def openSelectedItem(self, event):
 		if self.m_listCtrl1.GetFirstSelected()!=-1:
-			path="Downloaded\\"+self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)
+			path=self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)#"Downloaded\\"+
 			webbrowser.open(path)
 
 	def m_pbOnButtonClick( self, event ):
@@ -654,7 +654,7 @@ class LibFrame ( wx.Frame ):
 		self.m_artist.Wrap(160)
 		self.m_artist.Refresh()
 		#Thumbnail
-		path="Downloaded\\"+self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)
+		path=self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)#"Downloaded\\"+
 		try:
 			self.m_infotype.SetLabel("Type: "+path[-4:].upper()) #file type
 			image = Image.open(path)
@@ -673,7 +673,7 @@ class LibFrame ( wx.Frame ):
 		Thread(target=LibFrame.getpalette,daemon=True,args=[self]).start()
 
 	def getpalette(self):
-		path="Downloaded\\"+self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)
+		path=self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)#"Downloaded\\"+
 		try:
 			gp=Haishoku.getPalette(path)
 			palettelist=[]
@@ -696,12 +696,12 @@ class LibFrame ( wx.Frame ):
 	def m_buttonEditOnButtonClick( self, event ):
 		dialog = EditDialog(None, 'Title', 'Caption')
 		dialog.Center()
-		path=self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)
+		path=self.m_listCtrl1.GetItemText(self.m_listCtrl1.GetFirstSelected(),2)#"Downloaded\\"+
 		dialog.SetValue(path)
 		if dialog.ShowModal() == wx.ID_OK:
 			selected=self.m_listCtrl1.GetFirstSelected()
 			try:
-				os.rename("Downloaded\\"+path,"Downloaded\\"+dialog.GetValue())
+				os.rename(path, dialog.GetValue())
 				self.m_buttonRefOnButtonClick(event) #refresh
 				indx=self.m_listCtrl1.FindItem(-1,dialog.GetValue()) #find item
 				self.m_listCtrl1.Select(indx)
