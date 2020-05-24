@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pyinstaller = "*"
+black = "*"
+
+[packages]
+pyperclip = "*"
+haishoku = "*"
+beautifulsoup4 = "*"
+requests = "*"
+wxPython = "*"
+Pillow = "*"
+
+[requires]
+python_version = "3.8"
