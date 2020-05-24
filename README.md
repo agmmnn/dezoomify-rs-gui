@@ -29,6 +29,7 @@ Run with Python:
 - **Image Palette** : Get 5 dominant colors from the image. Click and copy the hex code to the clipboard.
 
 ## TODO:
+- [x] Get Batch Image Links from User Gallery, Story, Artist Profile URLs on Google Arts.
 - [ ] Cross-Platform Support.
 - [ ] Stop Download Process.
 - [ ] Detailed Download Report.
@@ -36,7 +37,6 @@ Run with Python:
 - [ ] Parallel Download.
 - [ ] Select Zoom Level.
 - [ ] Advanced Settings.
-- [ ] Get Batch Image Links from Artist Profile, Lists, User Favorites on Google Arts.
 
 ## Requirements:
 * [Python 3+](https://www.python.org/downloads/)
@@ -47,6 +47,7 @@ Dependencies:
 - pyperclip (Clipboard Control)
 - Pillow (Image Thumbnails)
 - Haishoku (Palette)
+- requests, beautifulsoup4 (Find Batch Images)
 
 ### Contributing
 Your contributions are always welcome.
