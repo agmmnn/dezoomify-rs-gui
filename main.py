@@ -41,7 +41,7 @@ class MainFrame(wx.Frame):
 
         bSizer3 = wx.BoxSizer(wx.VERTICAL)
 
-        if (os.path.exists("icon.ico")):
+        if os.path.exists("icon.ico"):
             icon = wx.Icon()
             icon.CopyFromBitmap(wx.Bitmap("icon.ico", wx.BITMAP_TYPE_ANY))
             self.SetIcon(icon)
@@ -623,7 +623,11 @@ class MainFrame(wx.Frame):
                     stinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
                 # run process
                 p = subprocess.run(
-                    [dezpath, "-l", url], capture_output=True, startupinfo=stinfo
+                    [dezpath, "-l", url],
+                    capture_output=True,
+                    startupinfo=stinfo,
+                    shell=True,
+                    stdin=subprocess.PIPE,
                 )
                 if "Image successfully saved" in str(p.stdout):
                     infolist.append((True, i + 1, url))
