@@ -10,47 +10,57 @@
 </div>
 
 ## How to Use
-1. _\*Not yet\*, Download [Latest Release](../../releases/latest)._
+
+1. Download [Latest Release](../../releases/latest).
 2. Download [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases), copy to same folder.
+3. Run.
 
 Run with Python:
+
 1. Download [main.py](https://raw.githubusercontent.com/agmmnn/dezoomify-rs-gui/master/main.py)
-4. Download [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases), copy to same folder.
-2. `pip3 install -r requirements.txt`
-3. `python main.py`
+2. Download [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases), copy to same folder.
+3. `pip3 install -r requirements.txt`
+4. `python main.py`
 
 ![Downloaded Images Library](imgs/ss_library.png "Downloaded Images Library")
 
 ## Features:
-- **Batch Download** : Download listed URLs.
-- **Clipboard Listener** : Automatically add copied URLs from clipboard.
-- **Save-Load** : Save and load URLs from list.txt file.
-- **Downloaded Images Library** : List of downloaded images. If the filename format is "a - b.ext", the title and artist name can also be listed.
-- **Image Palette** : Get 5 dominant colors from the image. Click and copy the hex code to the clipboard.
+
+-   **Batch Download** : Download listed URLs.
+-   **Clipboard Listener** : Automatically add copied URLs from clipboard.
+-   **Save-Load** : Save and load URLs from list.txt file.
+-   **Downloaded Images Library** : List of downloaded images. If the filename format is "a - b.ext", the title and artist name can also be listed.
+-   **Image Palette** : Get 5 dominant colors from the image. Click and copy the hex code to the clipboard.
+-   **Batch Image Links from Google Arts** : Get batch image links from the given User Gallery, Story, Artist Profile\* URLs.
 
 ## TODO:
-- [x] Get Batch Image Links from User Gallery, Story, Artist Profile URLs on Google Arts.
-- [ ] Cross-Platform Support.
-- [ ] Stop Download Process.
-- [ ] Detailed Download Report.
-- [ ] ProgressBar for Download.
-- [ ] Parallel Download.
-- [ ] Select Zoom Level.
-- [ ] Advanced Settings.
+
+-   [x] Get Batch Image Links from User Gallery, Story, Artist Profile URLs on Google Arts.
+-   [ ] Cross-Platform Support.
+-   [ ] Stop Download Process.
+-   [ ] Detailed Download Report.
+-   [ ] ProgressBar for Download.
+-   [ ] Parallel Download.
+-   [ ] Select Zoom Level.
+-   [ ] Advanced Settings.
 
 ## Requirements:
-* [Python 3+](https://www.python.org/downloads/)
-* [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases)
+
+-   [Python 3+](https://www.python.org/downloads/)
+-   [dezoomify-rs](https://github.com/lovasoa/dezoomify-rs/releases)
 
 Dependencies:
-- wxPython (GUI Framework)
-- pyperclip (Clipboard Control)
-- Pillow (Image Thumbnails)
-- Haishoku (Palette)
-- requests, beautifulsoup4 (Find Batch Images)
+
+-   wxPython (GUI Framework)
+-   pyperclip (Clipboard Control)
+-   Pillow (Image Thumbnails)
+-   Haishoku (Palette)
+-   requests, beautifulsoup4 (Find Batch Images)
 
 ### Contributing
+
 Your contributions are always welcome.
 
 ### License
+
 CC0
